@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="eventForm" id="eventForm">
+        <label class="form-label" for="event_name" name="input">
+          Event name
+          <input class="form-input" type="text" id="eventName" required />
+        </label>
+        <label class="form-label" for="">
+          Event type
+          <select class="form-input" id="eventType">
+            <option value="click">click</option>
+            <option value="lead">lead</option>
+            <option value="sale">sale</option>
+          </select>
+        </label>
+        <button class="form-button" type="submit">add</button>
+      </form>
+    </div>
+    <div class="stats">
+      <p>Total: <span id="total">0</span></p>
+      <p>Click: <span id="click">0</span></p>
+      <p>Lead: <span id="lead">0</span></p>
+      <p>Sale: <span id="sale">0</span></p>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <script src="./index.js"></script>
+  </body>
+</html>
